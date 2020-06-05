@@ -3,7 +3,7 @@
 * **Objective** - To create a shape-printer using `console.log`.
 * **Purpose** - To establish familiarity with basic Javascript.
 * **Description**
-    * You are provided with a file located at `./assets/js/utils.js`
+    * You are provided with a file located at `./assets/js/shapes.js`
     * Edit the file by defining each of the respective function-stubs.
     * The objective is to create a program which will print shapes with dimensions dependent on user-input.
 
