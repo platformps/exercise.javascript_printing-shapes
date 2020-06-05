@@ -19,7 +19,7 @@
 
 
 ## Part 2 - Printing line
-* Finish defining the `printLine` function-stub located in `./assets/js/utils.js`.
+* Complete definition of the `getLine` function-stub located in `./assets/js/shapes.js`.
 	* The function should ask user to input `length`print a solid line of the requested `length` using asterisks.
 * Test the function by _calling_ it from `./assets/js/header-functions.js`, then opening the **insepctor-tool** on the `./index.html` document.
 
@@ -38,7 +38,7 @@ Shape:
 
 
 ## Part 3 - Printing box
-* Finish defining the `printBox` function-stub located in `./assets/js/utils.js`.
+* Finish defining the `getBox` function-stub located in `./assets/js/shapes.js`.
 	* The function should ask user to input `width` and `height` and prints a solid rectangular box of the requested size using asterisks.
 * Test the function by _calling_ it from `./assets/js/header-functions.js`, then opening the **insepctor-tool** on the `./index.html` document.
 
@@ -57,7 +57,7 @@ Shape:
 
 
 ## Part 4 - Checkerboard
-* Finish defining the `printCheckerboard` function-stub located in `./assets/js/utils.js`.
+* Finish defining the `getCheckerboard` function-stub located in `./assets/js/shapes.js`.
 	* The function should ask user to input `width` and `height` and prints a rectangular checkerboard of the requested size using asterisks and spaces (alternating)
 * Test the function by _calling_ it from `./assets/js/header-functions.js`, then opening the **insepctor-tool** on the `./index.html` document.
 
@@ -89,7 +89,7 @@ Shape:
 
 
 ## Part 5 - Cross
-* Finish defining the `printCross` function-stub located in `./assets/js/utils.js`.
+* Finish defining the `getCross` function-stub located in `./assets/js/shapes.js`.
 	* The function should require input for a `length`, and print a diagonal cross of that dimension.
 * Test the function by _calling_ it from `./assets/js/header-functions.js`, then opening the **insepctor-tool** on the `./index.html` document.
 
@@ -117,7 +117,7 @@ Shape:
 
 
 ## Part 6 - Lower Triangle
-* Finish defining the `printLowerTriangle` function-stub located in `./assets/js/utils.js`.
+* Finish defining the `getLowerTriangle` function-stub located in `./assets/js/shapes.js`.
 	* The function should require input for a `length`, and print the bottom-left half of a square, given the side length.
 * Test the function by _calling_ it from `./assets/js/header-functions.js`, then opening the **insepctor-tool** on the `./index.html` document.
 
@@ -142,7 +142,7 @@ Shape:
 
 
 ## Part 7 - Upper Triangle
-* Finish defining the `printUpperTriangle` function-stub located in `./assets/js/utils.js`.
+* Finish defining the `getUpperTriangle` function-stub located in `./assets/js/shapes.js`.
 	* The function should require input for a `length`, and print the top-right half of a square, given the side length.
 * Test the function by _calling_ it from `./assets/js/header-functions.js`, then opening the **insepctor-tool** on the `./index.html` document.
 
@@ -167,7 +167,7 @@ Shape:
 
 
 ## Part 8 - Upside Down Trapezoid
-* Finish defining the `printUpsideDownTrapezoid` function-stub located in `./assets/js/utils.js`.
+* Finish defining the `getUpsideDownTrapezoid` function-stub located in `./assets/js/shapes.js`.
 	* The function should require input for a `width`and `height`, and print an upside-down trapezoid of given width and height.
 	* If the input `height` is impossibly large for the given `width`, then the program should report, `Impossible shape!`
 
