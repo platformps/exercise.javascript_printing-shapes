@@ -31,6 +31,19 @@ function getBox(width, height) {
 
 function getBottomLeftTriangle(length) {
     // TODO - write method definition here
+    var count = 0;
+    var numOfStarsForLine = 1;
+    var bottomeLeftTriangle = "";
+    while(count < length){
+        for(var starCount = 0; starCount < numOfStarsForLine; starCount++){
+           bottomeLeftTriangle += "*"; 
+        }
+
+        bottomeLeftTriangle += "\n";
+        count++;
+        numOfStarsForLine++;
+    }
+    return bottomeLeftTriangle;
 }
 
 
