@@ -25,11 +25,25 @@ function getBox(width, height) {
 
 function getBottomLeftTriangle(length) {
     // TODO - write method definition here
+    var output = "";
+    for (var i=1; i <=length; i++){
+        for(j=0; j<i; j++){
+            output+= "*";
+        } output = output + "\n";
+    } return output;
+
 }
 
 
 function getUpperLeftTriangle(length) {
     // TODO - write method definition here
+    var output = "";
+        for (var i=0; i <=length; i++){
+            for(j=length; j>i; j--){
+                output+= "*";
+            } output = output + "\n";
+            
+        } return output;
 }
 
 
