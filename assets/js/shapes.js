@@ -155,8 +155,8 @@ function getCheckerboard(width, height) {
             //Depending on Cell position if x y added together is even than space otherwise *
             checkerboard += ((heightIndex + widthIndex) % 2 == 0) ? " " : "*";
         }
-
-        //Not totally sure the pattern when to add a new line
+        
+        //Make sure every row besides last gets a new line
         if (heightIndex != height - 1) {
             checkerboard += "\n";
         }
