@@ -1,8 +1,11 @@
 function getLine(length) {
     // TODO - write method definition here
-    for(let x = 1; x <= legnth; x++){
-        //do the thing
+    var answer = "";
+    var userIn = length;
+    for(let x = 1; x <= userIn; x++){
+        answer += "*";
     }
+    return answer;
 }
 
 
