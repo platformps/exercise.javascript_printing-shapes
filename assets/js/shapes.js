@@ -77,9 +77,6 @@ function getPyramid(length){
         else if(length - count == 2){
             pyramid += " ";
         }
-        else{
-
-        }
         for(var starCount = 0; starCount < starsPerLine; starCount++){
             pyramid += "*";
         }
@@ -119,6 +116,5 @@ function getCheckerboard(width, height) {
         }
         checkerBoard += "\n";
     }
-    
     return checkerBoard;
 }
