@@ -1,11 +1,30 @@
 function getLine(length) {
-    // TODO - write method definition here
+
+    var line = "";
+    for(var count = 0; count < length; count++){
+        line += "*";
+    }
+    return line;
 }
 
 
 
 function getBox(width, height) {
-    // TODO - write method definition here
+   
+    var hCount = 0;
+    var wCount = 0;
+    var box = "";
+    while(hCount < height){
+        wCount = 0;
+        while(wCount < width){
+            box += "*"
+            wCount++;
+        }
+        box += "\n";
+        wCount = 0;
+        hCount++;
+    }
+   return box;
 }
 
 
