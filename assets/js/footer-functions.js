@@ -22,9 +22,9 @@ function getBoxTests() {
 }
 
 function getBottomLeftTriangleTests() {
-    testGetBottomLeftTriangle("*", 1);
-    testGetBottomLeftTriangle("*\n**", 2);
-    testGetBottomLeftTriangle("*\n**\n**", 3);
+    testGetBottomLeftTriangle("*\n", 1);
+    testGetBottomLeftTriangle("*\n**\n", 2);
+    testGetBottomLeftTriangle("*\n**\n***\n", 3);
 }
 
 function getUpperLeftTriangleTests() {

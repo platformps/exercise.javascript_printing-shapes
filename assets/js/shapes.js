@@ -1,22 +1,44 @@
 function getLine(length) {
-    // TODO - write method definition here
-}
 
+    let lineExpected= "";
+    for(let loopCounter = 0; loopCounter < length; loopCounter++){
+        lineExpected = lineExpected + "*";
+    }
+    return lineExpected;
+}
 
 
 function getBox(width, height) {
-    // TODO - write method definition here
+    let lineExpected= "";
+    for(let lineLoopCounter = 0; lineLoopCounter < width; lineLoopCounter++){
+        for(let culLoopCounter = 0; culLoopCounter < height; culLoopCounter++){
+            lineExpected = lineExpected + "*";
+        }
+        lineExpected = lineExpected + "\n";
+    }
+    return lineExpected;
 }
-
-
 
 function getBottomLeftTriangle(length) {
-    // TODO - write method definition here
+    let lineExpected= "";
+    for(let lineLoopCounter = 0; lineLoopCounter < length; lineLoopCounter++){
+        for(let culLoopCounter = 0; culLoopCounter < lineLoopCounter; culLoopCounter++){
+            lineExpected = lineExpected + "*";
+        }
+        lineExpected = lineExpected + "\n";
+    }
+    return lineExpected;
 }
 
-
 function getUpperLeftTriangle(length) {
-    // TODO - write method definition here
+    let lineExpected= "";
+    for(let lineLoopCounter = 0; lineLoopCounter < length; lineLoopCounter++){
+        for(let culLoopCounter = 0; culLoopCounter < lineLoopCounter; culLoopCounter++){
+            lineExpected = lineExpected + "*";
+        }
+        lineExpected = lineExpected + "\n";
+    }
+    return lineExpected;
 }
 
 
