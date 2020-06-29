@@ -123,7 +123,7 @@ function getPyramid(length) {
             pyramid += "*";
         }
 
-        //Add first set of spaces
+        //Add second set of spaces
         for (var i = 0; amountSpaces > i; i++) {
             pyramid += " ";
         }
@@ -155,7 +155,7 @@ function getCheckerboard(width, height) {
             //Depending on Cell position if x y added together is even than space otherwise *
             checkerboard += ((heightIndex + widthIndex) % 2 == 0) ? " " : "*";
         }
-        
+
         //Make sure every row besides last gets a new line
         if (heightIndex != height - 1) {
             checkerboard += "\n";
