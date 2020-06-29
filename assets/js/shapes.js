@@ -1,10 +1,5 @@
 function getLine(length) {
-    var star = "*";
-    var star1 = "";
-    for (var i = 0; i< length; i++ ){
-        star1 = star1 + star; 
-    }
-    return star1;
+    return "*".repeat(length);
     // TODO - write method definition here
 }
 
