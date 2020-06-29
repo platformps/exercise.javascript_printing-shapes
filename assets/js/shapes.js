@@ -1,5 +1,6 @@
 function getLine(length) {
     // TODO - write method definition here
+    console.log(length);
 }
 
 
