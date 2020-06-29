@@ -14,10 +14,11 @@ return output;
     for (let i=0; i<length; i++){
         output += "*";
     }
+    for (let i=0; i<height; i++){
+        output += "*";
+    }
     return output;
 }
-
-
 
 function getBottomLeftTriangle(length) {
     let output = "";
