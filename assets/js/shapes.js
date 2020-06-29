@@ -96,6 +96,9 @@ function getUpperLeftTriangle(length) {
 /*  Get a Pyramid whose row = length and longest col = length * 2 - 1
     length : amount of rows the pyramid will have
     return : String that resembles a pyramid
+
+    PS: I know there's an easier way to this but I couldn't think of it at this time.
+    #TODO come back and figure out pattern to combine three inner for loops into one loop
 */
 function getPyramid(length) {
     if (length < 0) {
@@ -134,7 +137,11 @@ function getPyramid(length) {
     return pyramid;
 }
 
-
+/*  Get a Checkerboard with "odd" cells = "*" and "even" = " "
+    width : width of the checkerboard
+    height : height of the checkerboard
+    return : String that resembles a checkerboard type pattern.
+*/
 function getCheckerboard(width, height) {
     if (width < 0) {
         throw new Error("Illegal arguement - width needs to be greater than 0");
@@ -142,18 +149,18 @@ function getCheckerboard(width, height) {
         throw new Error("Illegal arguement - height needs to be greater than 0");
     }
 
-    var line = new String();
+    var checkerboard = new String();
     for (var heightIndex = 0; height > heightIndex; heightIndex++) {
         for (var widthIndex = 0; width > widthIndex; widthIndex++) {
             //Depending on Cell position if x y added together is even than space otherwise *
-            line += ((heightIndex + widthIndex) % 2 == 0) ? " " : "*";
+            checkerboard += ((heightIndex + widthIndex) % 2 == 0) ? " " : "*";
         }
 
         //Not totally sure the pattern when to add a new line
         //So I decided to hardcode when height is 4
         if (heightIndex != height - 1 || height == 4) {
-            line += "\n";
+            checkerboard += "\n";
         }
     }
-    return line;
+    return checkerboard;
 }
