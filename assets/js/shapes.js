@@ -49,6 +49,25 @@ function getBottomLeftTriangle(length) {
 
 function getUpperLeftTriangle(length) {
     // TODO - write method definition here
+    var answer = "";
+    var loop = true;
+    var count = length;
+    do{
+        //Create current line
+        for(let x = 1; x <= count; x++){
+            answer += "*";
+        }
+        //Add new line if
+        if(count != 1){
+            answer += "\n";
+        }
+        //Decrement my counter
+        count --;
+        if(count === 0){
+            loop = false;
+        }
+    }while(loop);
+    return answer;
 }
 
 
