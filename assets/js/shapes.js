@@ -33,28 +33,61 @@ function getBottomLeftTriangle(length) {
     // TODO - write method definition here
     var count = 0;
     var numOfStarsForLine = 1;
-    var bottomeLeftTriangle = "";
+    var bottomLeftTriangle = "";
     while(count < length){
         for(var starCount = 0; starCount < numOfStarsForLine; starCount++){
-           bottomeLeftTriangle += "*"; 
+            bottomLeftTriangle += "*"; 
         }
 
-        bottomeLeftTriangle += "\n";
+        bottomLeftTriangle += "\n";
         count++;
         numOfStarsForLine++;
     }
-    return bottomeLeftTriangle;
+    return bottomLeftTriangle;
 }
 
 
 function getUpperLeftTriangle(length) {
     // TODO - write method definition here
+    var count = 0;
+    var numOfStarsForLine = length;
+    var upperLeftTriangle = "";
+    while(count < length){
+        for(var starCount = 0; starCount < numOfStarsForLine; starCount++){
+            upperLeftTriangle += "*"; 
+        }
+
+        upperLeftTriangle += "\n";
+        count++;
+        numOfStarsForLine--;
+    }
+    return upperLeftTriangle;
 }
 
 
 
-function getPyramid(length) {
-    // TODO - write method definition here
+function getPyramid(length){
+    var count = 0;
+    var starsPerLine = 1;
+    var pyramid = "";
+    while(count < length){
+        if(length - count == 3){
+            pyramid += "  ";
+        }
+        else if(length - count == 2){
+            pyramid += " ";
+        }
+        else{
+
+        }
+        for(var starCount = 0; starCount < starsPerLine; starCount++){
+            pyramid += "*";
+        }
+        pyramid += "\n";
+        starsPerLine += 2;
+        count++;
+    }
+    return pyramid;
 }
 
 
