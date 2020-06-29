@@ -1,6 +1,10 @@
+/*  Get a Simple Line
+    length : length of the line
+    return : String that resembles a line consisting of *
+*/
 function getLine(length) {
     if (length < 0) {
-        throw new Error("Illegal arguement");
+        throw new Error("Illegal arguement - length needs to be greater than 0");
     }
 
     var line = "";
@@ -11,29 +15,38 @@ function getLine(length) {
     return line;
 }
 
-
+/*  Get a Box
+    width : width of box
+    height : height of box
+    return : String that resembles a box that consists of *
+*/
 function getBox(width, height) {
     if (width < 0) {
-        throw new Error("width needs to be greater than 0");
+        throw new Error("Illegal arguement - width needs to be greater than 0");
     } else if (height < 0) {
-        throw new Error("height needs to be greater than 0");
+        throw new Error("Illegal arguement - height needs to be greater than 0");
     }
+
     var line = new String();
     for (var heightIndex = 0; height > heightIndex; heightIndex++) {
         for (var widthIndex = 0; width > widthIndex; widthIndex++) {
             line += "*";
         }
+
+        //All Boxes will have a \n at the end of each line (even last)
         line += "\n";
     }
     return line;
 }
 
 
-
+/*  Get a Right Triangle that Bottom is located bottom left
+    length : of longest side of triangle
+    return : String that resembles a right triangle
+*/
 function getBottomLeftTriangle(length) {
     if (length < 0) {
-        //throw new Error("length needs to be greater than 0");
-        return "";
+        throw new Error("length needs to be greater than 0");
     }
     var triangle = new String();
     var lineNumber = 0;
@@ -44,6 +57,8 @@ function getBottomLeftTriangle(length) {
             amount++;
         }
         lineNumber++;
+
+        //Make sure every row besides last gets a new line
         if (lineNumber != length) {
             triangle += "\n";
         }
@@ -51,11 +66,13 @@ function getBottomLeftTriangle(length) {
     return triangle;
 }
 
-
+/*  Get a Right Triangle that Bottom is located top left
+    length : of longest side of triangle
+    return : String that resembles a right triangle
+*/
 function getUpperLeftTriangle(length) {
     if (length < 0) {
-        //throw new Error("length needs to be greater than 0");
-        return "";
+        throw new Error("Illegal arguement - length needs to be greater than 0");
     }
     var triangle = new String();
     var lineNumber = length;
@@ -66,6 +83,8 @@ function getUpperLeftTriangle(length) {
             amount++;
         }
         lineNumber--;
+
+        //Make sure every row besides last gets a new line
         if (lineNumber != 0) {
             triangle += "\n";
         }
@@ -74,27 +93,39 @@ function getUpperLeftTriangle(length) {
 }
 
 
-
+/*  Get a Pyramid whose row = length and longest col = length * 2 - 1
+    length : amount of rows the pyramid will have
+    return : String that resembles a pyramid
+*/
 function getPyramid(length) {
     if (length < 0) {
-        throw new Error("length needs to be greater than 0");
+        throw new Error("Illegal arguement - length needs to be greater than 0");
     }
     col = length * 2 - 1;
     row = length;
     var amountStars = 1;
     var pyramid = new String();
     for (var j = 0; row > j; j++) {
+
+        //Calculate amount spaces on row
         var amountSpaces = Math.floor((col - amountStars) / 2);
-        console.log("Math.floor((col - amountStars) / 2)" + Math.floor((col - amountStars) / 2));
+
+        //Add first set of spaces
         for (var i = 0; amountSpaces > i; i++) {
             pyramid += " ";
         }
+
+        //Add Stars
         for (var i = 0; amountStars > i; i++) {
             pyramid += "*";
         }
+
+        //Add first set of spaces
         for (var i = 0; amountSpaces > i; i++) {
             pyramid += " ";
         }
+
+        //Make sure every row besides last gets a new line
         if(j != row - 1){
             pyramid += "\n";
         }
@@ -106,13 +137,15 @@ function getPyramid(length) {
 
 function getCheckerboard(width, height) {
     if (width < 0) {
-        throw new Error("width needs to be greater than 0");
+        throw new Error("Illegal arguement - width needs to be greater than 0");
     } else if (height < 0) {
-        throw new Error("height needs to be greater than 0");
+        throw new Error("Illegal arguement - height needs to be greater than 0");
     }
+
     var line = new String();
     for (var heightIndex = 0; height > heightIndex; heightIndex++) {
         for (var widthIndex = 0; width > widthIndex; widthIndex++) {
+            //Depending on Cell position if x y added together is even than space otherwise *
             line += ((heightIndex + widthIndex) % 2 == 0) ? " " : "*";
         }
 
