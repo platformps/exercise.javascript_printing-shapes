@@ -25,6 +25,25 @@ function getBox(width, height) {
 
 function getBottomLeftTriangle(length) {
     // TODO - write method definition here
+    var answer = "";
+    var loop = true;
+    var count = 1;
+    do{
+        //Create current line
+        for(let x = 1; x <= count; x++){
+            answer += "*";
+        }
+        //Add new line if
+        if(count != length){
+            answer += "\n";
+        }
+        //Increment my counter
+        count ++;
+        if(count > length){
+            loop = false;
+        }
+    }while(loop);
+    return answer;
 }
 
 
