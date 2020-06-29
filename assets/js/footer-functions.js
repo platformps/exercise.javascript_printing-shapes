@@ -42,7 +42,7 @@ function getPyramidTests() {
 
 
 function getCheckerboardTests() {
-    testGetCheckerboard(" *\n* ", 2, 2);
-    testGetCheckerboard(" * \n* *\n * ", 3, 3);
+    testGetCheckerboard(" *\n* \n", 2, 2);
+    testGetCheckerboard(" * \n* *\n * \n", 3, 3);
     testGetCheckerboard(" * \n* *\n * \n* *\n", 3, 4);
 }
