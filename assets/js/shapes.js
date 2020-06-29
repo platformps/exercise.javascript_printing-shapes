@@ -91,9 +91,7 @@ function getPyramid(length){
 function getCheckerboard(width, height) {
     var hCount = 0;
     var wCount = 0;
-    var lineCount = 0;
     var checkerBoard = "";
-    var currentLineCharCount = 0;
 
     for(var hCount = 0; hCount < height; hCount++){
         for(wCount = 0; wCount < width; wCount++){
