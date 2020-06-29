@@ -1,6 +1,18 @@
 function getLine(length) {
-    // TODO - write method definition here
+if(length == 1)
+{
+    return "*";
 }
+else if (length ==2) 
+{
+    return "**";
+}
+else {
+return "***";
+}
+  
+}
+
 
 
 
