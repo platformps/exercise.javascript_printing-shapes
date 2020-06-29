@@ -157,8 +157,7 @@ function getCheckerboard(width, height) {
         }
 
         //Not totally sure the pattern when to add a new line
-        //So I decided to hardcode when height is 4
-        if (heightIndex != height - 1 || height == 4) {
+        if (heightIndex != height - 1) {
             checkerboard += "\n";
         }
     }
