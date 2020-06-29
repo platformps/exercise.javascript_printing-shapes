@@ -24,7 +24,7 @@ function getBoxTests() {
 function getBottomLeftTriangleTests() {
     testGetBottomLeftTriangle("*", 1);
     testGetBottomLeftTriangle("*\n**", 2);
-    testGetBottomLeftTriangle("*\n**\n**", 3);
+    testGetBottomLeftTriangle("*\n**\n***", 3); //test is fubar, added the missing *
 }
 
 function getUpperLeftTriangleTests() {

@@ -1,6 +1,8 @@
 function getLine(length) {
     // TODO - write method definition here
-    console.log(length);
+    for(let x = 1; x <= legnth; x++){
+        //do the thing
+    }
 }
 
 
