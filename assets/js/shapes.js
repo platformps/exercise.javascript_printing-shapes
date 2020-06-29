@@ -156,10 +156,8 @@ function getCheckerboard(width, height) {
             checkerboard += ((heightIndex + widthIndex) % 2 == 0) ? " " : "*";
         }
 
-        //Make sure every row besides last gets a new line
-        if (heightIndex != height - 1) {
-            checkerboard += "\n";
-        }
+        //Every line gets a \n
+        checkerboard += "\n";
     }
     return checkerboard;
 }
