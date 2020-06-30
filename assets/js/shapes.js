@@ -28,20 +28,37 @@ function getBox(width, height) {
 function getBottomLeftTriangle(length) {
   let iterationCounter;
   let iterationCounter_2;
-  for (iterationCounter = 0; iterationCounter < length; iterationCounter++) {
+  let output = "";
+  for (iterationCounter = 1; iterationCounter <= length; iterationCounter++) {
     for (
       iterationCounter_2 = 0;
       iterationCounter_2 < iterationCounter;
-      iterationCounter_2
+      iterationCounter_2++
     ) {
       output += "*";
     }
-    output += "br/>";
+    output += "\n";
   }
+  return output;
 }
 
 function getUpperLeftTriangle(length) {
-  // TODO - write method definition here
+  let output = "";
+  let iterationCounter;
+  let iterationCounter_2;
+
+  for (iterationCounter = length; iterationCounter >= 1; iterationCounter--) {
+    for (
+      iterationCounter_2 = length - 1;
+      iterationCounter_2 >= length - iterationCounter;
+      iterationCounter_2--
+    ) {
+      output += "*";
+    }
+
+    output += "\n";
+  }
+  return output;
 }
 
 function getPyramid(length) {
