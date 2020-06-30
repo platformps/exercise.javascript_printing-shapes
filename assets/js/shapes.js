@@ -56,30 +56,28 @@ function getPyramid(length) {
     var spacing = length;
     var newPyramid = true;
     for (i = 1; i <= length; i++) {   
-
         for (j = 0; j < spacing -1; j++) {
             stars += " ";
         }
-
         for (k = 1; k <= i; k++) {
             if (i == 1 && k==1 && newPyramid) {
                 stars += "*";
-                spacing--;
-                
+                spacing--;   
             } else {
                 stars += "**";
                 spacing--;
             }
         }  
-
-    
-
         if (i != length) {
             if (!newPyramid) {
                 stars=stars.substring(0, stars.length - 1);
             }
+            for (j = 0; j < length -1; j++) {
+                stars += " ";
+            
             stars += "\n"; 
             newPyramid = false;
+            }
         }  
     }
     if (stars.indexOf("*")) {
@@ -87,10 +85,6 @@ function getPyramid(length) {
     }
     return stars;
 }
-
-
-
-
 
 function getCheckerboard(width, height) {
     // TODO - write method definition here
