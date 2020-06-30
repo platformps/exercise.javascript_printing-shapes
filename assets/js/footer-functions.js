@@ -24,7 +24,7 @@ function getBoxTests() {
 function getBottomLeftTriangleTests() {
     testGetBottomLeftTriangle("*", 1);
     testGetBottomLeftTriangle("*\n**", 2);
-    testGetBottomLeftTriangle("*\n**\n**", 3);
+    testGetBottomLeftTriangle("*\n**\n***", 3);
 }
 
 function getUpperLeftTriangleTests() {
@@ -42,7 +42,7 @@ function getPyramidTests() {
 
 
 function getCheckerboardTests() {
-    testGetCheckerboard(" *\n* ", 2, 2);
-    testGetCheckerboard(" * \n* *\n * ", 3, 3);
+    testGetCheckerboard(" *\n* \n", 2, 2);
+    testGetCheckerboard(" * \n* *\n * \n", 3, 3);
     testGetCheckerboard(" * \n* *\n * \n* *\n", 3, 4);
 }
