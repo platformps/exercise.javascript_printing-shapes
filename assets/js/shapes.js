@@ -21,7 +21,7 @@ return output;
         output1 += "*";
     }
     for (let i=0; i<height; i++){
-        output2 += output1;
+        output2 += output1 + "\n";
     }
 return output2;
 }
@@ -30,11 +30,11 @@ return output2;
 //Bottom Left Triangle
 function getBottomLeftTriangle(length) {
     let output = "";
-    for (let i=0; i<length; i++){
+    for (let i=0; i<=length; i++){
+        for (let j=length-1; j>=i; j--){
         output += "*";
-        for (let j=1; j<i; j++){
-        output += "\n";
         }
+        output += "\n";
     }
     return output;
     }
@@ -43,11 +43,14 @@ function getBottomLeftTriangle(length) {
 //Top Left Triangle
 function getUpperLeftTriangle(length) {
     let output = "";
-    for (let i=0; i<length; i++){
+    for (let i=0; i<=length; i++){
+        for (let j=length-1; j>=i; j--){
         output += "*";
+        }
+        output += "\n";
     }
     return output;
-}
+    }
 
 
 //Pyramid
@@ -66,7 +69,8 @@ function getCheckerboard(width, height) {
     let output2 = "";
     
     for (let i=0; i<width; i++){
-        output1 += "*" + " ";
+        output1 += "*";
+        output1 += " ";
     }
     for (let i=0; i<height; i++){
         output2 += output1 + "\n";
