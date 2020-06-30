@@ -38,7 +38,7 @@ function getBottomLeftTriangle(length) {
 function getUpperLeftTriangle(length) {
     // TODO - write method definition here
     var output = "";
-        for (var i=0; i <=length; i++){
+        for (var i=0; i <length; i++){
             for(j=length; j>i; j--){
                 output+= "*";
             } output = output + "\n";
@@ -50,8 +50,22 @@ function getUpperLeftTriangle(length) {
 
 function getPyramid(length) {
     // TODO - write method definition here
+    var output = "";
+    for(i=1;i <=length; i++){
+      for(k=1; k<=length-i; k++){
+        output+= " ";
+      }
+      for(j=1; j<=i;j++ ){
+        for(l=1; l<j; l++){
+           output+= "*";
+        }
+        output+= "*";
+        
+      }
+      output += "\n";
+    } 
+    return output;
 }
-
 
 function getCheckerboard(width, height) {
     // TODO - write method definition here
