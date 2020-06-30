@@ -12,11 +12,13 @@ function getBox( 7, 4) {
     let output = " ";  
     for(let i=0; i<7; i++)
     {
-    for(let j=0; j<4; j++)
-    {
-    output += output + "*";
+    output += "*";
+        for(let j=0; j<4; j++)
+        {
+        output += "*";
+        }
+        break
     }
-    output = "<br/>";
     return output;
 }
  
@@ -26,10 +28,11 @@ function getBottomLeftTriangle(length) {
 let output = "";
 for(let i=1; i<=6; i++)
 {
+output = "*";
     for(let j=1; j<=i; j++){
-    output = output + "*";
+    output = "*";
     }
-    output = "<br/>"
+    break
 }
     return output;
 }
@@ -42,7 +45,7 @@ function getUpperLeftTriangle(length) {
         for(let j=1; j<=i; j++){
         output = output + "*";
         }
-        output = "<br/>"
+        break
     }   
         return output;
     }
