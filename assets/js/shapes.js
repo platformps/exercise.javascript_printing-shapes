@@ -56,10 +56,16 @@ function getPyramid(length) {
 
 
 function getCheckerboard(width, height) {
-    let lineExpected= "";
+    let lineExpected= "_";
     for(let lineLoopCounter = 0; lineLoopCounter < width; lineLoopCounter++){
         for(let culLoopCounter = 0; culLoopCounter < height; culLoopCounter++){
-            lineExpected = lineExpected + "*";
+            i = lineExpected.charAt(myString.length - 1)
+            if (i == "\n")
+                lineExpected.charAt(myString.length - 2)
+            if(i == "*")
+                lineExpected = lineExpected + "_";
+            else 
+                lineExpected = lineExpected + "*";
         }
         lineExpected = lineExpected + "\n";
     }
