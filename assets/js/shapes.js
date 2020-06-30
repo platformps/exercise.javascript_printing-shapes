@@ -51,13 +51,25 @@ function getUpperLeftTriangle(length) {
 
 function getPyramid(length) {
     let stars = "";
-    for (let iterationCount = 1; iterationCount <= length; iterationCount++) {
-
+    for (var i = 0; i < length; i++) {
+        var str = "";
+        for (var j = 1; j < length - i; j++) {
+            str = str + " ";
+        }
+        for (var k = 1; k <= (2 * i + 1); k++) {
+            str = str + "*";
+        }
+        stars += str;
+        stars += "\n";
 
     }
+
+    return stars;
+
 }
 
 
+
 function getCheckerboard(width, height) {
-    // TODO - write method definition here
+
 }
