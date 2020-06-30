@@ -1,5 +1,7 @@
 function testGetLine(expectedOutput, numberOfStars) {
-    test(expectedOutput, getLine, numberOfStars);
+  //  getLine(length);
+
+
 }
 
 function testGetBox(expectedOutput, width, height) {
