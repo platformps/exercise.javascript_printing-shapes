@@ -21,7 +21,7 @@ function getBox(width, height) {
 
 function getBottomLeftTriangle(length) {
     let lineExpected= "";
-    for(let lineLoopCounter = 0; lineLoopCounter < length; lineLoopCounter++){
+    for(let lineLoopCounter = 0; lineLoopCounter <= length; lineLoopCounter++){
         for(let culLoopCounter = 0; culLoopCounter < lineLoopCounter; culLoopCounter++){
             lineExpected = lineExpected + "*";
         }
@@ -32,8 +32,8 @@ function getBottomLeftTriangle(length) {
 
 function getUpperLeftTriangle(length) {
     let lineExpected= "";
-    for(let lineLoopCounter = 0; lineLoopCounter < length; lineLoopCounter++){
-        for(let culLoopCounter = 0; culLoopCounter < lineLoopCounter; culLoopCounter++){
+    for(let lineLoopCounter = length; lineLoopCounter >= 0; lineLoopCounter--){
+        for(let culLoopCounter = lineLoopCounter ; culLoopCounter > 0; culLoopCounter--){
             lineExpected = lineExpected + "*";
         }
         lineExpected = lineExpected + "\n";
@@ -41,13 +41,27 @@ function getUpperLeftTriangle(length) {
     return lineExpected;
 }
 
-
-
 function getPyramid(length) {
-    // TODO - write method definition here
+    let lineExpected= "";
+    for(let lineLoopCounter = 0; lineLoopCounter <= length; lineLoopCounter++){
+        if (lineLoopCounter %2 != 0){
+            for(let culLoopCounter = 0; culLoopCounter < lineLoopCounter; culLoopCounter++){
+                lineExpected = lineExpected + "*";
+            }
+        }
+        lineExpected = lineExpected + "\n";
+    }
+    return lineExpected;
 }
 
 
 function getCheckerboard(width, height) {
-    // TODO - write method definition here
+    let lineExpected= "";
+    for(let lineLoopCounter = 0; lineLoopCounter < width; lineLoopCounter++){
+        for(let culLoopCounter = 0; culLoopCounter < height; culLoopCounter++){
+            lineExpected = lineExpected + "*";
+        }
+        lineExpected = lineExpected + "\n";
+    }
+    return lineExpected;
 }
