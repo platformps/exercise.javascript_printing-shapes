@@ -21,7 +21,7 @@ return output;
         output1 += "*";
     }
     for (let i=0; i<height; i++){
-        output2 += output1 + "\n";
+        output2 += output1;
     }
 return output2;
 }
@@ -33,7 +33,7 @@ function getBottomLeftTriangle(length) {
     for (let i=0; i<length; i++){
         output += "*";
         for (let j=1; j<i; j++){
-        output += "\n"
+        output += "\n";
         }
     }
     return output;
@@ -66,7 +66,7 @@ function getCheckerboard(width, height) {
     let output2 = "";
     
     for (let i=0; i<width; i++){
-        output1 += "*";
+        output1 += "*" + " ";
     }
     for (let i=0; i<height; i++){
         output2 += output1 + "\n";
