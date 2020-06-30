@@ -1,8 +1,7 @@
 function getLine(length) {
     // TODO - write method definition here
     let output = "";
-    let length = 7;
-    for (let i=0; i<7; i++) {
+    for (let i=0; i<length; i++) {
         output +="*";
     }
 
@@ -15,13 +14,20 @@ function getLine(length) {
 
 function getBox(width, height) {
     // TODO - write method definition here
-    let output = "";
-    for ( let i=0; i<width; i++ && let i=0; i<height; i++) {
-        output +="*";
+   var cH=0;
+   var cW=0;
+   var box= "";
+   while(cH<height) {
+       cW=0;
+       while(cW<width){
+        box +="*";
+        cW++;}
+        box+="\n";
+        cW=0;
+        cH++;
     } 
-{
 
-    return output;
+    return box;
 }
 
 
@@ -29,6 +35,11 @@ function getBox(width, height) {
 
 function getBottomLeftTriangle(length) {
     // TODO - write method definition here
+    var output"";
+    for(i=1; i<=length; i++) {
+        output=output + getLine(i) + "\n";
+    }
+    return output;
 }
 
 
