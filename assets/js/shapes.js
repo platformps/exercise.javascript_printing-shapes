@@ -45,19 +45,26 @@ function getPyramid(length) {
     if(length == 0 || length == 1) return getLine(length);
 
     for(let i = 1; i <= length; i++) {
-        
         let line = "";
-
-        for(let j = 1; j <= (length - i + 1)/2; j++) {
+        for(let j = 1; j <= length - i; j++) {
             line += " ";
         }
-        for(let k = 1; k <= i + 2; k++) line += "*";
 
-        shape += line + "\n";
+        if(i == 1) {
+            line += "*";
+        } else {
+            for(let j = 1; j <= 1 + Math.pow(2, i - 1); j++) {
+                line += "*";
+            }
+        }
+
+        for(let j = 1; j <= length - i; j++) {
+            line += " ";
+        }
+
+        shape += line;
+        if(i != length) shape += "\n";
     }
-
-
-   
     return shape;
 }
 
