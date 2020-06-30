@@ -1,5 +1,7 @@
 
 
+
+//Line
   function getLine(length) {
 
 let output = "";
@@ -10,7 +12,7 @@ return output;
 }
 
 
-//
+//Box
  function getBox(width, height) {
     let output1 = "";
     let output2 = "";
@@ -25,7 +27,7 @@ return output2;
 }
 
 
-//
+//Bottom Left Triangle
 function getBottomLeftTriangle(length) {
     let output = "";
     for (let i=0; i<length; i++){
@@ -35,7 +37,7 @@ function getBottomLeftTriangle(length) {
 }
 
 
-//
+//Top Left Triangle
 function getUpperLeftTriangle(length) {
     let output = "";
     for (let i=0; i<length; i++){
@@ -45,7 +47,7 @@ function getUpperLeftTriangle(length) {
 }
 
 
-//
+//Pyramid
 function getPyramid(length) {
     let output = "";
     for (let i=0; i<length; i++){
@@ -55,12 +57,16 @@ function getPyramid(length) {
 }
 
 
-
-//
+//Checkerboard
 function getCheckerboard(width, height) {
-    let output = "";
+    let output1 = "";
+    let output2 = "";
+    
     for (let i=0; i<width; i++){
-        output += "*";
+        output1 += "*";
     }
-    return output;
+    for (let i=0; i<height; i++){
+        output2 += output1 + "\n";
+    }
+return output2;
 }
