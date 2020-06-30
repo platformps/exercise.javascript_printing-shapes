@@ -46,7 +46,19 @@ function getBottomLeftTriangle(length) {
 
 
 function getUpperLeftTriangle(length) {
-    // TODO - write method definition here
+
+    let output = "";
+    for(let i=1;i<=length;i++)
+    {
+        if(i>1){output=output+"\n";}
+        for(let j=length;j>=i;j--)
+        {
+            output+="*";
+        }
+        
+    }  
+    return output;
+    
 }
 
 
