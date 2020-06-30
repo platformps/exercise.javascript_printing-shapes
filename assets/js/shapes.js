@@ -61,7 +61,7 @@ function getPyramid(length) {
             }
         }
 
-        // Adding space after the stars
+        // Adding extra space after the stars
         for(let j = 1; j <= length - i; j++) {
             line += " ";
         }
@@ -74,5 +74,20 @@ function getPyramid(length) {
 
 
 function getCheckerboard(width, height) {
-    // TODO - write method definition here
+    let shape = "";
+    
+    for(let i = 1; i <= height; i++) {
+        let line = "";
+        for(let j = 1; j <= width; j++) {
+
+            // Adding space or star
+            if((i % 2 == 0 && j % 2 == 0) || (i % 2 == 1 && j % 2 == 1)) {
+                line += " ";
+            } else {
+                line += "*";
+            }
+        }
+        shape += line + "\n";
+    }
+    return shape;
 }
