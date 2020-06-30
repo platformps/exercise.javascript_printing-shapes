@@ -30,11 +30,15 @@ function getBox(width, height) {
 
 function getBottomLeftTriangle(length) {
     let output = "";
-    for(let i=0;i<length;i++)
+    for(let i=1;i<=length;i++)
     {
-        output+="*"
-    }
-    
+        if(i>1){output=output+"\n";}
+        for(let j=1;j<=i;j++)
+        {
+            output+="*";
+        }
+        
+    }  
     return output;
 }
 
