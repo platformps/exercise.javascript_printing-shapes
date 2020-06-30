@@ -33,9 +33,9 @@ function getBottomLeftTriangle(length) {
 function getUpperLeftTriangle(length) {
     
     var topTriangle = "";
-    for (var i = length; i>0; i--){
-        topTriangle = topTriangle + getLine(i);
-        if (i != 1){
+    for (var width = length; width>0; width--){
+        topTriangle = topTriangle + getLine(width);
+        if (width != 1){
             topTriangle = topTriangle + "\n";
         }
     }
@@ -47,12 +47,12 @@ function getUpperLeftTriangle(length) {
 
 function getPyramid(length) {
     var pyramid = "";
-    var j = 1;
+    var width = 1;
     var size = length -1;
     for (var i = 0; i < length; i++){
-        pyramid = pyramid +  " ".repeat(size) + getLine(j) + " ".repeat(size); 
-        j = j + 2;
-        size = size - 1;
+        pyramid = pyramid +  " ".repeat(size) + getLine(width) + " ".repeat(size); 
+        width+= 2;
+        size-= 1;
         if (i != length-1){
             pyramid = pyramid + "\n";
         }
