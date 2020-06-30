@@ -1,7 +1,7 @@
 function getLine(length) {
-  // TODO - write method definition here
-  var str = "";
-  for(var i=0; i<length; i++) {
+
+  let str = "";
+  for(let spot=1; spot<=length; spot++) {
     str+= "*";
   }
   return str;
@@ -10,30 +10,22 @@ function getLine(length) {
 
 
 function getBox(width, height) {
-  // TODO - write method definition here
-  var str = "";
-  for(var i=0; i<height; i++) {
-    for(var j=0; j<width; j++) {
-     str += "*"; 
-    }
-    str += "\n";
-  }
+
+  let str = "";
+  for(let level=1; level<=height; level++)
+     str += getLine(width) + "\n"; 
   return str;
+
 }
 
 
 
 function getBottomLeftTriangle(length) {
-  // TODO - write method definition here
-  var str = "";
-  for (var i = 1; i <= length; i++) {
-    for (var j = 0; j < i; j++) {
-      str += "*";
-    }
-    if (i != length) {
-      str += "\n";
-    }
-  }
+
+  let str = "";
+  
+  for(let level = 1; level<=length; level++)
+    str += getLine(level) + (level!=length ? "\n" : "");
 
   return str;
 }
@@ -41,60 +33,57 @@ function getBottomLeftTriangle(length) {
 
 
 function getUpperLeftTriangle(length) {
-  // TODO - write method definition here
-  var str = "";
-  for (var i = length; i > 0; i--) {
-    for (var k = 0; k < i; k++) {
-      str += "*";
-    }
-    if (i != 1) {
-      str += "\n";
-    }
-  }
+  
+  let str = "";
+  
+  for(let level=length; level > 0; level--)
+    str += getLine(level) + (level!=1 ? "\n" : "");
+
   return str;
 }
 
 
 
 function getPyramid(length) {
-  // TODO - write method definition here
-  var str = "";
-  for (var layer = 1; layer <= length; layer++) {
 
-    //add leading spaces
-    for (var j = 0; j < length - layer; j++) {
-      str += " ";
-    }
-    //add asterisks
-    for (var j = 0; j < 2 * layer - 1; j++) {
-      str += "*";
-    }
-    //addiing spaces
-    for (var j = 0; j < length - layer; j++) {
-      str += " ";
-    }
-    str += (layer<length ? "\n" : "");
+  let str = "";
+  
+  for(let level=1; level<=length; level++) {
+
+    let spaces = "";
+    for(let i=0; i<length-level; i++)
+      spaces += " ";
+
+    let thisLevelWidth = 2*level - 1;    
+    str += spaces + getLine(thisLevelWidth) + spaces + (level<length ? "\n" : "");
+
   }
+
   return str;
 }
 
 
 function getCheckerboard(width, height) {
-  // TODO - write method definition here
-  var str = "";
 
-  for (var layer = 1; layer <= height; layer++) {
-    var isOddLayer = (layer % 2) == 1;
-    for (var slot = 1; slot <= width; slot++) {
-      var isOddSlot = (slot % 2 == 1);
-      if (isOddLayer) {
+  let str = "";
+
+  for(let level=1; level<=height; level++) {
+    
+    let isOddLayer = (level % 2) == 1;
+    
+    for(let slot=1; slot<=width; slot++) {
+      
+      let isOddSlot = (slot % 2 == 1);
+      
+      if (isOddLayer)
         str += isOddSlot ? " " : "*";
-      }
-      else {
+      else
         str += isOddSlot ? "*" : " ";
-      }
+    
     }
+
     str += "\n";
   }
+
   return str;
 }
