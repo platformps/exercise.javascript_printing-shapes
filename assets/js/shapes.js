@@ -32,9 +32,12 @@ function getBottomLeftTriangle(length) {
     let output = "";
     for (let i=0; i<length; i++){
         output += "*";
+        for (let j=1; j<i; j++){
+        output += "\n"
+        }
     }
     return output;
-}
+    }
 
 
 //Top Left Triangle
