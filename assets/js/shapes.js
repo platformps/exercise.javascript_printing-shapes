@@ -76,21 +76,22 @@ function getUpperLeftTriangle(length) {
 function getPyramid(length) {
     // TODO - write method definition here
 
-    let str2 = "";
+    //let str2 = "";
 
-    for (let i = 1; i <= length; i++) {
-        for (let j = 1; j < (length - 1); j++) {
+    for (let i = 0; i < length; i++) {
+        let str2 = "";
+        for (let j = 1; j < (length - i); j++) {
 
-            str2 = str2.concat("\n ");
+            str2 = str2 + " ";
         } // nested for loop
-        for (let index = 1; index <= (i + 1); index++) {
+        for (let index = 1; index <= (2 * i + 1); index++) {
 
-            str2 = str2.concat(" *");
+            str2 = str2 + "*";
         } //nested for loop 2 ends here
 
-        str2 = str2.concat("\n");
+        //str2 = str2.concat(" \n");
+        console.log(str2);
     } // for loop
-    return str2;
 } // getPyramid method ends here.
 
 
