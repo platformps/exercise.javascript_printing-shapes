@@ -30,7 +30,7 @@ return output2;
 //Bottom Left Triangle
 function getBottomLeftTriangle(length) {
     let output = "";
-    for (let i=0; i<=length; i++){
+    for (let i=0; i<length; i++){
         for (let j=0; j<=i; j++){
         output += "*";
         }
