@@ -46,10 +46,13 @@ function getPyramid(length) {
 
     for(let i = 1; i <= length; i++) {
         let line = "";
+
+        // Adding leading space
         for(let j = 1; j <= length - i; j++) {
             line += " ";
         }
 
+        // Adding stars
         if(i == 1) {
             line += "*";
         } else {
@@ -58,6 +61,7 @@ function getPyramid(length) {
             }
         }
 
+        // Adding space after the stars
         for(let j = 1; j <= length - i; j++) {
             line += " ";
         }
