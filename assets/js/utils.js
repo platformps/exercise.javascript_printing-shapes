@@ -20,7 +20,7 @@ function __test(methodName, expectedOutput, func, arg1, arg2) {
     let output = func(arg1, arg2);
     let pass = output == expectedOutput
     console.log("output = \n" + output);
-    console.log("expected = \n" + expectedOutput);    
+    console.log("expected = \n" + expectedOutput);
     console.log("test pass = " + pass);
     console.log("------------------------------------")
     console.log("------------------------------------")
