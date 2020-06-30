@@ -116,9 +116,8 @@ function getCheckerboard(width, height) {
         }
         j = 1;
         ++i
-        if (i <= height) {
-            v1 += "\n"
-        }
+        v1 += "\n"
+        
     }
     return v1;
 }
