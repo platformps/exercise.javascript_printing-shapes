@@ -35,7 +35,7 @@ function getBox(width, height) {
 
 function getBottomLeftTriangle(length) {
     // TODO - write method definition here
-    var output"";
+    var output= "";
     for(i=1; i<=length; i++) {
         output=output + getLine(i) + "\n";
     }
@@ -45,13 +45,34 @@ function getBottomLeftTriangle(length) {
 
 function getUpperLeftTriangle(length) {
     // TODO - write method definition here
+    var output= "";
+    for(i=5; i>=length; i--) {
+        output=output + getLine(i) + "\n";
+    }
+    return output;
 }
 
 
 
 function getPyramid(length) {
     // TODO - write method definition here
+    for(var i=1; i<=length; i++)
+{
+for(var k=1; k<=( length-i ); k++)
+{
+return (" ");
 }
+for(var j=1; j<=i; j++)
+{
+return("* ");
+}
+return("<br/>");
+}
+    
+    return output;
+}
+
+
 
 
 function getCheckerboard(width, height) {
