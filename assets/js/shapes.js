@@ -29,9 +29,7 @@ function getBox(width, height) {
 
     var line = new String();
     for (var heightIndex = 0; height > heightIndex; heightIndex++) {
-        for (var widthIndex = 0; width > widthIndex; widthIndex++) {
-            line += "*";
-        }
+        line += getLine(width);
 
         //All Boxes will have a \n at the end of each line (even last)
         line += "\n";
@@ -49,19 +47,16 @@ function getBottomLeftTriangle(length) {
         throw new Error("length needs to be greater than 0");
     }
     var triangle = new String();
-    var lineNumber = 0;
-    while (length > lineNumber) {
-        var amount = 0;
-        while (lineNumber >= amount) {
-            triangle += "*";
-            amount++;
-        }
-        lineNumber++;
+    var lineNumber = 1;
+    while (length >= lineNumber) {
+        triangle += getLine(lineNumber);
+        
 
         //Make sure every row besides last gets a new line
         if (lineNumber != length) {
             triangle += "\n";
         }
+        lineNumber++;
     }
     return triangle;
 }
@@ -77,11 +72,7 @@ function getUpperLeftTriangle(length) {
     var triangle = new String();
     var lineNumber = length;
     while (lineNumber > 0) {
-        var amount = 0;
-        while (lineNumber > amount) {
-            triangle += "*";
-            amount++;
-        }
+        triangle += getLine(lineNumber);
         lineNumber--;
 
         //Make sure every row besides last gets a new line
