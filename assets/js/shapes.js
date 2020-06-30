@@ -86,43 +86,37 @@ function getPyramid(length) {
 
 function getCheckerboard(width, height) {
     // TODO - write method definition here
-    i = 0;
-    j = 0;
+    i = 1;
+    j = 1;
     let v1 = ""
 
-    while(i<height)
-    {
-        if(height%2==0)
-        {
-            for(j;j<width;j++)
-            {
-                if(j%2==0)
-                {
-                    v1+=" ";
+    while (i <= height) {
+        if (i % 2 == 0) {
+            for (j; j <= width; j++) {
+                if (j % 2 == 0) {
+                    v1 += " ";
                 }
-                else{
-                    v1+="*";
+                else {
+                    v1 += "*";
                 }
             }
 
         }
 
-        else{
-            for(j;j<width;j++)
-            {
-                if(j%1==0)
-                {
-                    v1+=" ";
+        else {
+            for (j; j <= width; j++) {
+                if (j % 2 == 0) {
+                    v1 += "*";
                 }
-                else{
-                    v2+="*";
+                else {
+                    v1 += " ";
                 }
             }
 
         }
-        j = 0;
+        j = 1;
         ++i
-        if (i!= height) {
+        if (i <= height) {
             v1 += "\n"
         }
     }
