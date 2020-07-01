@@ -30,11 +30,11 @@ return output2;
 //Bottom Left Triangle
 function getBottomLeftTriangle(length) {
     let output = "";
-    for (let i=0; i<length; i++){
-        for (let j=0; j<=i; j++){
+    for (let i=1; i<=length; i++){
+        for (let j=0; j<i; j++){
         output += "*";
         }
-        output += "\n";
+        output = output + "\n";
     }
     return output;
     }
@@ -43,8 +43,8 @@ function getBottomLeftTriangle(length) {
 //Top Left Triangle
 function getUpperLeftTriangle(length) {
     let output = "";
-    for (let i=0; i<=length; i++){
-        for (let j=length-1; j>=i; j--){
+    for (let i=0; i<length; i++){
+        for (let j=length; j>i; j--){
         output += "*";
         }
         output += "\n";
@@ -54,12 +54,22 @@ function getUpperLeftTriangle(length) {
 
 
 //Pyramid
-function getPyramid(length) {
+function getPyramid(length) 
+{
     let output = "";
-    for (let i=0; i<length; i++){
-        output += "*";
-    }
-    return output;
+    for (let i=0; i<length; i++)
+    {
+        for(let j=1; j<length-i; j++)
+        {
+            output+= " ";
+        }
+         for(let k=1; k<=(i * 2 + 1); k++)
+            { 
+              output+= "*";
+            }
+            output+= "\n";
+    }    
+           return output;
 }
 
 
