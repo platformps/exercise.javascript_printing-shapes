@@ -34,7 +34,7 @@ function getBottomLeftTriangle(length) {
         for (let j=0; j<i; j++){
         output += "*";
         }
-        output = output + "\n";
+        output += "\n";
     }
     return output;
     }
@@ -51,6 +51,7 @@ function getUpperLeftTriangle(length) {
     }
     return output;
     }
+
 
 
 //Pyramid
@@ -73,17 +74,20 @@ function getPyramid(length)
 }
 
 
+
 //Checkerboard
+
 function getCheckerboard(width, height) {
-    let output1 = "";
-    let output2 = "";
-    
-    for (let i=0; i<width; i++){
-        output1 += "*";
-        output1 += " ";
+    let output = "";
+    for (let i = 0; i <height; i++) {
+        for (let j = 0 ; j < width ; j++) {
+            if (((i+j)%2) == 0) {
+                output += " ";
+            } else {
+                output += "*";
+            }
+        }
+        output += "\n";
     }
-    for (let i=0; i<height; i++){
-        output2 += output1 + "\n";
-    }
-return output2;
+    return output;
 }
