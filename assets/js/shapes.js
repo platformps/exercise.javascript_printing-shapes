@@ -88,10 +88,69 @@ function getPyramid(length) {
 
 function getCheckerboard(width, height) {
     // TODO - write method definition here
+    var stars = "";
+    var counter3 = 0;
+    var counter1_2;
+    for(rows = 0; rows < height-1; rows++) {     
+        for (columns = 0; columns < width-1; columns++) {
+            counter3 ++;
+            if (counter3 % 3 == 0) {
+                stars += "* *\n";
+            } else {
+                counter1_2 ++;
+                if (counter1_2 % 2 == 0) {
+                stars += "*\n * \n"
+                } else {
+                    stars +=" *\n* "
+                }
 
+            }
+        }  
+        stars += "\n";      
+    }
+    return stars;
 }
 
 
+
+
+/*
+    var stars = "";
+    var spacing = length;
+    var diamondLevel = 0;
+    for (i = 1; i <= length; i++) {   
+        for (j = 0; j < spacing -1; j++) {
+            stars += " ";
+        }
+        for (k = 1; k <= i; k++) {
+            if (i == 1 && k==1 && newPyramid) {
+                stars += "*";
+                spacing--;   
+            } else {
+                stars += "**";
+                spacing--;
+            }
+        }  
+        if (i != length) {
+            if (!newPyramid) {
+                stars=stars.substring(0, stars.length - 1);
+            }
+            for (j = 0; j < length -1; j++) {
+                stars += " ";
+            
+            stars += "\n"; 
+            newPyramid = false;
+            }
+        }  
+    }
+    if (stars.indexOf("*")) {
+        stars=stars.substring(0, stars.length - 1);
+    }
+    return stars;
+}
+
+
+*/
 
 
 
