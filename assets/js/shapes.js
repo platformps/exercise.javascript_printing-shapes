@@ -1,71 +1,103 @@
-function getLine (length) {
+var line = function getLine(length) {
     // TODO - write method definition here
-let output = "";
-    for(let i=0; i<7; i++){
-        output += "*";
-    }
-    return output;
-}
-
-function getBox( 7, 4) {
-    // TODO - write method definition here
-    let output = " ";  
-    for(let i=0; i<7; i++)
-    {
-    output += "*";
-        for(let j=0; j<4; j++)
-        {
-        output += "*";
+var length = 7;
+var i, j;
+    for(i=0; i<=1; i++) {
+        for(j=0; j<=length; j++) {
+            return '*';
         }
-        break
+        return '<br>';
+        }
     }
-    return output;
+    console.log(getLine);
+
+var box = function getBox(length, width) {
+    // TODO - write method definition here
+var length = 4;
+var width = 7;
+var i, j;
+for(i=0; i<=length; i++) {
+    for(j=1; j<=width; j++) {
+        return '* ';
+        }
+        return '<br>';
+    }
 }
+    console.log(getBox);  
  
 
-function getBottomLeftTriangle(length) {
+var lowerTriangleLeft = function getBottomLeftTriangle(length) {
     // TODO - write method definition here
-let output = "";
-for(let i=1; i<=6; i++)
-{
-output = "*";
-    for(let j=1; j<=i; j++){
-    output = "*";
-    }
-    break
-}
-    return output;
-}
-
-function getUpperLeftTriangle(length) {
-    // TODO - write method definition here
-    let output = "";
-    for(let i=1; i<=5; i--)
-    {
-        for(let j=1; j<=i; j++){
-        output = output + "*";
+var i, j;
+var length = 6;
+    for(i=1; i<=length; i++) {
+        for(j=1; j<=i; j++) {
+            return '* ';
         }
-        break
-    }   
-        return output;
+        return '<br>';
     }
-
-
-function getPyramid(length) {
-    // TODO - write method definition here
-for (let i = 0; i < n; i++) {
-    let output = '';
-    for (let j = 1; j < n-i; j++) {
-      output = output + ' ';
-    }
-    for (let k = 1; k <= (2*i+1); k++) {
-      output = output + '*';
-    }
-    return output;
-  }
 }
+    console.log(getBottomLeftTriangle);
 
-
-function getCheckerboard(width, height) {
+var upperTriangleLeft = function getUpperLeftTriangle(length) {
     // TODO - write method definition here
+var i, j;
+var length = 6;
+    for(i=1; i<=length; i++) {
+        for(j=1; j<=i; j--) {
+            return '* ';
+        }
+        return '<br>';
+    }
 }
+    console.log(getUpperLeftTriangle);
+
+
+var pyramid = function getPyramid(length) {
+    // TODO - write method definition here
+var i, j, k;
+var length = 7;
+    for(i=1; i<=length; i++); 
+    {
+        for(var k=1; k<= (length - i); k++)
+        {
+            return '&nbsp';
+        }
+        for(j=1; j<=i; j++) 
+        {
+            return'* ';
+        }
+    return '<br>';
+    }
+    console.log(getPyramid);
+
+var checkerBoard = function getCheckerboard(width, height){
+    // TODO - write method definition here
+var i, j;
+var height = 6;
+var width = 11;
+
+    for (i = 0; i <= height; i++)
+        {
+        if (i % 2 == 0)
+        {
+            return '* ';
+        }
+        else
+        {
+            return ' ';
+        }
+        }
+        for (j = 0; j <= width; j++)
+        {
+            if (j % 2 == 0)
+            {
+                return ' ';
+            }
+            else if (j != width || i % 2 != 0)
+            {
+                return '* ';
+            }
+        }
+} 
+console.log(getCheckerboard);
