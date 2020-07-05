@@ -80,14 +80,24 @@ function getPyramid(length) {
 
 function getCheckerboard(width, height) {
     let output = "";
-    for(let i=1;i<=width;i++)
-    {
-        if (i >1) output +="\n";
-        //let output = '';
-        for(let j=1; j<=height;j++){
-            
-            (j>=width+1-i && j<=height-1+i) ? output +="*" : output += " ";
-        }   
-    }  
+    let row = 0;
+    let col = 0;
+
+    while(row<=width){
+        flag = row%2;
+        while(col<=height){
+            if(flag){
+                output+= "* ";
+            }
+            else{
+                output+= " *";
+            }
+            col++;
+        }
+        output+="\n";
+        col=0;
+        row++;
+    
+    }
     return output;
 }
