@@ -64,10 +64,30 @@ function getUpperLeftTriangle(length) {
 
 
 function getPyramid(length) {
-    // TODO - write method definition here
+    let output = "";
+    for(let i=1;i<=length;i++)
+    {
+        if (i >1) {output +="\n";}
+        //let output = '';
+        for(let j=1; j<=(2*length-1);j++){
+            
+            (j>=length+1-i && j<=length-1+i) ? output +="*" : output += " ";
+        }   
+    }  
+    return output;
 }
 
 
 function getCheckerboard(width, height) {
-    // TODO - write method definition here
+    let output = "";
+    for(let i=1;i<=width;i++)
+    {
+        if (i >1) output +="\n";
+        //let output = '';
+        for(let j=1; j<=height;j++){
+            
+            (j>=width+1-i && j<=height-1+i) ? output +="*" : output += " ";
+        }   
+    }  
+    return output;
 }
