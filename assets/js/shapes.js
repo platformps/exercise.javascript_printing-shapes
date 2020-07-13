@@ -62,7 +62,10 @@ function getPyramid(length) {
         for (k = 1; k <= i; k++) {
             if (i == 1 && k==1 && newPyramid) {
                 stars += "*";
-                spacing--;   
+                spacing--;  
+                if (length >= 3) {
+                    stars += " ";
+                } 
             } else {
                 stars += "**";
                 spacing--;
@@ -77,6 +80,7 @@ function getPyramid(length) {
             
             stars += "\n"; 
             newPyramid = false;
+            break;
             }
         }  
     }
@@ -109,33 +113,3 @@ function getCheckerboard(width, height) {
     }
     return stars;
 }
-   
-   /* ===
-
-    var stars = "";
-    var counter3 = 0;
-    var counter1_2;
-    for(rows = 0; rows < height-1; rows++) {     
-        for (columns = 0; columns < width-1; columns++) {
-            counter3 ++;
-            if (counter3 % 3 == 0) {
-                stars += "* *\n";
-            } else {
-                counter1_2 ++;
-                if (counter1_2 % 2 == 0) {
-                stars += "*\n * \n"
-                } else {
-                    if (height < 3) {
-                        stars +=" *\n* "
-                    } else {
-                        stars += " * \n*"
-                    }
-                }
-
-            }
-        }  
-        stars += "\n";      
-    }    */
-//    return stars;
-//}
-
